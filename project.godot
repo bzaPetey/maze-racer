@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Camera",
+"class": "FollowCam",
+"language": "GDScript",
+"path": "res://Cameras/FollowCam.gd"
+}, {
+"base": "RigidBody",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player/PlayerRB.gd"
+} ]
+_global_script_class_icons={
+"FollowCam": "",
+"Player": ""
+}
+
+[application]
+
+config/name="3d Maze"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Globals/Global.gd"
+CS="*res://Globals/CustomSignals.gd"
+NetManage="*res://Globals/NetworkManager.gd"
+
+[rendering]
+
+quality/filters/msaa=2
+environment/default_environment="res://default_env.tres"
