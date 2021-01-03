@@ -16,6 +16,7 @@ func get_target():
 	return target
 
 
+
 func _process(delta):
 	if target == null:
 		find_target()
@@ -26,4 +27,3 @@ func _process(delta):
 
 func find_target():
 	target = get_parent().get_node("PlayerRB")
-	

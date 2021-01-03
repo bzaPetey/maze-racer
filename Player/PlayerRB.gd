@@ -13,7 +13,6 @@ var velocity:Vector3
 
 
 
-
 func _physics_process(delta):
 	velocity.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.z = Input.get_action_strength("ui_down")  - Input.get_action_strength("ui_up") 
@@ -22,5 +21,3 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_released("ui_select") && touching_floor.is_colliding():
 		apply_central_impulse(Vector3.UP * 5)
-		
-	

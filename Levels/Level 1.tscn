@@ -3,7 +3,7 @@
 [ext_resource path="res://Player/PlayerRB.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Level Geometry/10x10x1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cameras/FollowCam.gd" type="Script" id=3]
-[ext_resource path="res://Level Geometry/1x1x1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Level Geometry/2x2x1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Level Geometry/1x10x1.tscn" type="PackedScene" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
@@ -27,9 +27,6 @@ shadow_enabled = true
 
 [node name="Level Geom" type="Node" parent="."]
 
-[node name="1x1x1" parent="Level Geom" instance=ExtResource( 4 )]
-physics_material_override = SubResource( 2 )
-
 [node name="10x10x1" parent="Level Geom" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 physics_material_override = SubResource( 2 )
@@ -49,6 +46,9 @@ physics_material_override = SubResource( 2 )
 [node name="1x10x4" parent="Level Geom" instance=ExtResource( 5 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 1, -8.998 )
 physics_material_override = SubResource( 2 )
+
+[node name="2x2x1" parent="Level Geom" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="FollowCam" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, -4.56592, 6.25916, 10.2671 )
