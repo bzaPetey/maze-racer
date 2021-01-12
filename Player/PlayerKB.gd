@@ -1,5 +1,6 @@
 extends KinematicBody
 
+
 export var speed:float = 10
 var velocity:Vector3
 
